@@ -4,6 +4,10 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ * main - knoing numbers wheather its positive or not
+ * Return: 0 always
+ */
 int main(void)
 {
 	int n;
