@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int _abs -  a function computes the absolute value of an integer.
+ * _abs -  a function computes the absolute value of an integer.
  * @n: rntry num
  * Return: 0
  */
