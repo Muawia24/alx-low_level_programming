@@ -12,7 +12,7 @@ void print_times_table(int n)
 		for (i = 0; i <= n; i++)
 		{
 			_putchar('0');
-			for (j = 0; j <= n)
+			for (j = 0; j <= n; n++)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -29,7 +29,7 @@ void print_times_table(int n)
 				if (k >= 100)
 				{
 					_putchar((k / 100) + '0');
-					_putchar(((k / 10) % 10) + '0')
+					_putchar(((k / 10) % 10) + '0');
 				}
 				else if (k <= 99 && k >= 10)
 				{
@@ -40,3 +40,4 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 	}
+}
