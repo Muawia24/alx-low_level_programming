@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * _isupper - check the code.
  *@c: initial value
@@ -7,7 +7,7 @@
  */
 int _isupper(int c)
 {
-	c = 'a';
+
 	if (c >= 'A' && c <= 'Z')
 		return (1);
 	else
