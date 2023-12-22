@@ -2,7 +2,7 @@
 
 /**
  * _isupper - check the code.
- *
+ *@c: initial value
  * Return: Always 0.
  */
 int _isupper(int c)
