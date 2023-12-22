@@ -8,7 +8,7 @@
  *
  * Return: 0
  *
- **/
+ */
 int main(void)
 {
 	int i, num;
@@ -16,8 +16,11 @@ int main(void)
 
 	for (i = 2; i <= number; i++)
 	{
-		number = number / i;
-		num = i;
+		if (number % i == 0)
+		{
+			number = number / i;
+			num = i;
+		}
 	}
 	printf("%d\n", num);
 	return (0);
