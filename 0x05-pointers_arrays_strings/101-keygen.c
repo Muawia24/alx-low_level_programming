@@ -10,8 +10,17 @@
  */
 int main(void)
 {
-	char chars[] = "asdfghjklmnbvcxzqwertyuiopASDFGHJKLMNBVCXZQWERTYUIOP";
-	char pass[len + 1];
+	int pass, i;
 
-	srand(time(0));
+	srand(time(NULL));
+	i = 0;
+	while (i < 2645)
+	{
+		pass = rand() % 78;
+		i += pass;
+		printf("%c", pass);
+	}
+	printf("%c", 2772 - i);
+	return(0);
+}
 
