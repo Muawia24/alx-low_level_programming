@@ -16,7 +16,7 @@ int main(void)
 	i = 0;
 	while (i < 2645)
 	{
-		pass = rand() % 78;
+		pass = rand() % 128;
 		i += pass;
 		printf("%c", pass);
 	}
