@@ -8,21 +8,21 @@
  *
  */
 
-char *rot13(char *rot13)
+char *rot13(char *rot)
 {
 	int i, j;
 	char lett[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char sub[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; i != '\0'; i++)
+	for (i = 0; rot[i] != '\0'; i++)
 	{
-		for (j = 0; j != '\0'; j++)
+		for (j = 0; lett[j] != '\0'; j++)
 		{
-			if (rot13[i] == lett[j])
+			if (rot[i] == lett[j])
 			{
-				rot13[i] == sub[j];
+				rot[i] == sub[j];
 			}
 		}
 	}
-	return (rot13);
+	return (rot);
 }
