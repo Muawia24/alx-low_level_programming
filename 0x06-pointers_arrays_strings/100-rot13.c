@@ -29,7 +29,7 @@ char *rot13(char *rot)
 		{
 			if (rot[i] == lett[j])
 			{
-				rot[i] == sub[j];
+				rot[i] = sub[j];
 				break;
 			}
 		}
