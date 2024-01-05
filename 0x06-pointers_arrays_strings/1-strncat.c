@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <string.h>
 /**
  * _strncat - Write a function that concatenates two strings. it will use at
@@ -17,8 +17,8 @@ char *_strncat(char *dest, char *src, int n)
 	j = strlen(src) - n;
 	for (i = 0; src[i] != '\0'; i++)
 	{
-		dest[i + j] = src[i];
+		dest[i + j - 1] = src[i];
 	}
-	dest[i + j] = '\0';
+	dest[i + j - 1] = '\0';
 	return (dest);
 }

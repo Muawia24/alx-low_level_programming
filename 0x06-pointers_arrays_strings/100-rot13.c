@@ -2,7 +2,7 @@
 /**
  * rot13 - Write a function that encodes a string using rot13
  *
- * @hi: This is my input string
+ * @rot13: This is my input string
  *
  * Return: String converted to rot13
  *
@@ -10,7 +10,7 @@
 
 char *rot13(char *rot13)
 {
-	int i, l;
+	int i, j;
 	char lett[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char sub[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 

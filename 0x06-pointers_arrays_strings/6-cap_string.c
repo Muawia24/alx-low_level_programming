@@ -20,7 +20,7 @@ char *cap_string(char *s)
 			s[0] = s[0] - 32;
 		}
 
-		for(j = 0; chars[j] != '\0'; j++)
+		for (j = 0; chars[j] != '\0'; j++)
 		{
 			if (s[i] == chars[j])
 			{
@@ -29,6 +29,6 @@ char *cap_string(char *s)
 			}
 		}
 	}
-	return (s)
+	return (s);
 
 }
