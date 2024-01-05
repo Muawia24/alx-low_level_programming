@@ -2,7 +2,7 @@
 /**
  * rot13 - Write a function that encodes a string using rot13
  *
- * @rot13: This is my input string
+ * @rot: This is my input string
  *
  * Return: String converted to rot13
  *
@@ -21,6 +21,7 @@ char *rot13(char *rot)
 			if (rot[i] == lett[j])
 			{
 				rot[i] == sub[j];
+				break;
 			}
 		}
 	}
