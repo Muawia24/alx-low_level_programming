@@ -13,7 +13,6 @@ void print_diagsums(int *a, int size)
 	sum2 = 0;
 	diagonal1 = 0;
 	diagonal2 = size - 1;
-	
 	for (i = 0; i < size; i++)
 	{
 		sum1 += *(a + i * size + diagonal1);
