@@ -9,7 +9,7 @@
  */
 int check_prime_number(int n, int x)
 {
-	if (((n > 1) && (x == n)) || (x == 2))
+	if (((n > 1) && (x >= n)) || (x == 2))
 	{
 		return (1);
 	}
@@ -27,5 +27,5 @@ int check_prime_number(int n, int x)
  */
 int is_prime_number(int n)
 {
-	return (check_prime_number(n, 0));
+	return (check_prime_number(n, 2));
 }
