@@ -7,7 +7,7 @@
  *@root: root
  * Return: This is the result
  */
-int my _sqrt_recursion(int n, int root)
+int my_sqrt_recursion(int n, int root)
 {
 	if (root * root > n)
 	{
