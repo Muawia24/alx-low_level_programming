@@ -7,7 +7,7 @@
  *@root: root
  * Return: This is the result
  */
-int _sqrt_recursion(int n, int root)
+int my _sqrt_recursion(int n, int root)
 {
 	if (root * root > n)
 	{
@@ -19,4 +19,17 @@ int _sqrt_recursion(int n, int root)
 	}
 	return (_sqrt_recursion(n, root + 1));
 
+}
+
+/**
+ * _sqrt_recursion - This is my first function
+ * @n: This is my value
+ *
+ * Return: This is my result of the function my_sqrt_recursion
+ */
+int _sqrt_recursion(int n)
+{
+	if (n <= 0)
+		return (-1);
+	return (my_sqrt_recursion(n, 0));
 }

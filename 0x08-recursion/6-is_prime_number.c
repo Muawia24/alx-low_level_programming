@@ -9,11 +9,11 @@
  */
 int is_prime_number(int n, int x)
 {
-	if (n > 1 && x == n || x == 2)
+	if ((n > 1) && (x == n) || (x == 2))
 	{
 		return (1);
 	}
-	else if ((n % x) == 0 || (n <= 1))
+	else if (((n % x) == 0) || (n <= 1))
 	{
 		return (0);
 	}
