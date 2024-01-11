@@ -17,7 +17,7 @@ int check_prime_number(int n, int x)
 	{
 		return (0);
 	}
-	return (is_prime_number(n, x + 1));
+	return (check_prime_number(n, x + 1));
 }
 
 /**
