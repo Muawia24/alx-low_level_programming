@@ -17,7 +17,7 @@ int my_sqrt_recursion(int n, int root)
 	{
 		return (root);
 	}
-	return (_sqrt_recursion(n, root + 1));
+	return (my_sqrt_recursion(n, root + 1));
 
 }
 

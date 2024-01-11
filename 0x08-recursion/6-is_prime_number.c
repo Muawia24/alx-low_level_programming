@@ -22,11 +22,10 @@ int check_prime_number(int n, int x)
 
 /**
  * is_prime_number - check if n is a prime number
- * @resp:int
  * @n: int
  * Return: 0 or 1
  */
 int is_prime_number(int n)
 {
-	return (check_prime_number(n, 0);
+	return (check_prime_number(n, 0));
 }
