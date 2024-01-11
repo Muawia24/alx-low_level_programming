@@ -4,6 +4,7 @@
  * is_prime_number - check if n is a prime number
  * @resp:int
  * @n: int
+ * @x: int
  * Return: 0 or 1
  */
 int is_prime_number(int n, int x)
@@ -12,7 +13,7 @@ int is_prime_number(int n, int x)
 	{
 		return (1);
 	}
-	else if (n % x == 0 || n <= 1)
+	else if ((n % x) == 0 || (n <= 1))
 	{
 		return (0);
 	}
