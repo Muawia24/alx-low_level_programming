@@ -2,7 +2,6 @@
 #include <stdio.h>
 /**
  * check_prime_number - check if n is a prime number
- * @resp:int
  * @n: int
  * @x: int
  * Return: 0 or 1
