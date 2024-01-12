@@ -17,7 +17,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 	
 	if (argc > 1)
 	{
-		for (i = 0; i < argc; i++)
+		for (i = 0; i < argc - 1; i++)
 			;
 		printf("%d\n", i);
 
