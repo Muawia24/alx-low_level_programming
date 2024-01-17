@@ -52,8 +52,11 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
-
-	cents = change(c);
-	printf("%d\n", cents);
+	
+	else
+	{
+		cents = change(c);
+		printf("%d\n", cents);
+	}
 	return (0);
 }
