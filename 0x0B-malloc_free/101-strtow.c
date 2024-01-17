@@ -2,6 +2,24 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
+* free_grid - frees a 2d array
+*@grid:memory block to be freed
+*@height:height of the array
+*Return:returns void
+*/
+
+void free_grid(char **grid, size_t height)
+{
+	if (grid != NULL && height != 0)
+	{
+		for (; height > 0; height--)
+		free(grid[height]);
+			free(grid[height]);
+		free(grid);
+	}
+}
+
+/**
 *strtow - splits a stirng into words
 *@str: string to be splitted
 *
@@ -20,10 +38,8 @@ char **strtow(char *str)
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
 			height++;
-
 			s = malloc((height + 1) * sizeof(char *));
 		}
-
 		if (s == NULL)
 		{
 			free(s);
@@ -39,13 +55,11 @@ char **strtow(char *str)
 			if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 			{
 				s[j] = malloc((i - a + 2) * sizeof(char));
-
 				if (s[j] == NULL)
 				{
-					
+					free_grid(s, j);
 					return (NULL);
-				}
-				break;
+				} break;
 			}
 		}
 		for (k = 0; a <= i; a++, k++)
@@ -54,5 +68,4 @@ char **strtow(char *str)
 	}
 	s[j] = NULL;
 	return (s);
-
 }
