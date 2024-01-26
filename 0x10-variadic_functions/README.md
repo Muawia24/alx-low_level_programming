@@ -1,0 +1,1 @@
+Working eith variadic functions
