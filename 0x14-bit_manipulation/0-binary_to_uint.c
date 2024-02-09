@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * binary_to_uint - converts binary to integer
  * @b: pointing to string of 0's & 1's
@@ -13,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	for (j = 0; b[j]; j++)
 	{
-		if (b[j] < '0' || b[j] > '1')
+		if (b[j] != '0' && b[j] != '1')
 			return (0);
 		dec = 2 * dec + (b[j] - '0');
 	}
