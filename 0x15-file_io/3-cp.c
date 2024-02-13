@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	}
 
 	fto = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-	fwrite = write(fto, buf, 1024);
+	fwrite = write(fto, buf, fread);
 
 	if (fto == -1 || fwrite == -1)
 	{
@@ -57,6 +57,7 @@ int main(int argc, char *argv[])
 		free(buf);
 		exit(99);
 	}
+	free(buf);
 	close_file(ffrom);
 	close_file(fto);
 	return (0);
