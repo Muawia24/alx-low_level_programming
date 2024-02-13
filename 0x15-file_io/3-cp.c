@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	buf = malloc(sizeof(char) * 1024);
@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	ffrom = open(argv[1], O_RDONLY);
-	fto = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-	while (fread == 1024)
-	{
 	fread = read(ffrom, buf, 1024);
+	fto = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
 
+	while (fread > 0)
+	{
 	if (ffrom == -1 || fread == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
@@ -59,6 +59,8 @@ int main(int argc, char *argv[])
 		free(buf);
 		exit(99);
 	}
+	fread = read(ffrom, buf, 1024);
+	fto = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	free(buf);
 	close_file(ffrom);
