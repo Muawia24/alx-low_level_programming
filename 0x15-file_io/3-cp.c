@@ -41,26 +41,23 @@ int main(int argc, char *argv[])
 	ffrom = open(argv[1], O_RDONLY);
 	fread = read(ffrom, buf, 1024);
 	fto = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-
 	while (fread > 0)
 	{
-	if (ffrom == -1 || fread == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
-		free(buf);
-		exit(98);
-	}
-
-	fwrite = write(fto, buf, fread);
-
-	if (fto == -1 || fwrite == -1 || fwrite < fread)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		free(buf);
-		exit(99);
-	}
-	fread = read(ffrom, buf, 1024);
-	fto = open(argv[2], O_WRONLY | O_APPEND);
+		if (ffrom == -1 || fread == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			free(buf);
+			exit(98);
+		}
+		fwrite = write(fto, buf, fread);
+		if (fto == -1 || fwrite == -1 || fwrite < fread)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			free(buf);
+			exit(99);
+		}
+		fread = read(ffrom, buf, 1024);
+		fto = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	free(buf);
 	close_file(ffrom);
