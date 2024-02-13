@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	ffrom = open(argv[1], O_RDONLY);
+	fto = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
 	while (fread == 1024)
 	{
 	fread = read(ffrom, buf, 1024);
@@ -50,7 +51,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fto = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
 	fwrite = write(fto, buf, fread);
 
 	if (fto == -1 || fwrite == -1 || fwrite < fread)
