@@ -23,7 +23,7 @@ void close_file(int fd)
  */
 int main(int argc, char *argv[])
 {
-	int ffrom, fto, fread = 1024, fwrite;
+	int ffrom, fto, fread, fwrite;
 	char *buf;
 
 	if (argc != 3)
