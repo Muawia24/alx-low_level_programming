@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		fwrite = write(fto, buf, fread);
-		if (fto == -1 || fwrite == -1 || fwrite < fread)
+		if (fto == -1 || fwrite == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buf);
