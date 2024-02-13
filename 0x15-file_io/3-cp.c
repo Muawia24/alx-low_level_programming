@@ -23,7 +23,7 @@ void close_file(int fd)
  */
 int main(int argc, char *argv[])
 {
-	int ffrom, fto, fread, fwrite;
+	int ffrom, fto, fread = 1024, fwrite;
 	char *buf;
 
 	if (argc != 3)
@@ -39,6 +39,8 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	ffrom = open(argv[1], O_RDONLY);
+	while (fread == 1024)
+	{
 	fread = read(ffrom, buf, 1024);
 
 	if (ffrom == -1 || fread == -1)
@@ -56,6 +58,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		free(buf);
 		exit(99);
+	}
 	}
 	free(buf);
 	close_file(ffrom);
