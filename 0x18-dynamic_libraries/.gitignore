@@ -1,3 +1,2 @@
 *.o
-relative/path/to/dir/anotherfile
 *.py
